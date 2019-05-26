@@ -109,6 +109,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FEntidad";
             this.Text = "Entidad";
+            this.Load += new System.EventHandler(this.FEntidad_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

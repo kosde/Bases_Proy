@@ -10,19 +10,17 @@ using System.Windows.Forms;
 
 namespace BD
 {
-    public partial class FModifcarBD : Form
+    public partial class Borrar : Form
     {
-        public string nombre { get; set; }
-        public string nuevonombre { get; set; }
-        public FModifcarBD()
+        public string nombreb { get; set; }
+        public Borrar()
         {
             InitializeComponent();
         }
 
         private void buttonBD_Click(object sender, EventArgs e)
         {
-            nombre = comboBox_CargaT.Text;
-            nuevonombre = textBoxnuevoDB.Text;
+            nombreb = comboBox_CargaT.Text;
             DialogResult = DialogResult.OK;
             this.Close();
         }

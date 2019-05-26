@@ -35,10 +35,6 @@
             this.comboBox_tam_1 = new System.Windows.Forms.TextBox();
             this.comboBox_tam = new System.Windows.Forms.TextBox();
             this.Tamlabel = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.ComboBoxEntidadparaAtrib = new System.Windows.Forms.ComboBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.label16 = new System.Windows.Forms.Label();
             this.comboBox_Clave = new System.Windows.Forms.ComboBox();
             this.label15 = new System.Windows.Forms.Label();
@@ -53,14 +49,14 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.noLlave = new System.Windows.Forms.ComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(188, 74);
+            this.label23.Location = new System.Drawing.Point(69, 109);
             this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(44, 17);
@@ -71,7 +67,7 @@
             // comboTabla_llaveF
             // 
             this.comboTabla_llaveF.FormattingEnabled = true;
-            this.comboTabla_llaveF.Location = new System.Drawing.Point(233, 68);
+            this.comboTabla_llaveF.Location = new System.Drawing.Point(127, 102);
             this.comboTabla_llaveF.Margin = new System.Windows.Forms.Padding(4);
             this.comboTabla_llaveF.Name = "comboTabla_llaveF";
             this.comboTabla_llaveF.Size = new System.Drawing.Size(145, 24);
@@ -81,7 +77,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(58, 74);
+            this.label14.Location = new System.Drawing.Point(63, 73);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(50, 17);
@@ -94,11 +90,12 @@
             this.comb_KeyF.Items.AddRange(new object[] {
             "true",
             "false"});
-            this.comb_KeyF.Location = new System.Drawing.Point(127, 71);
+            this.comb_KeyF.Location = new System.Drawing.Point(127, 70);
             this.comb_KeyF.Margin = new System.Windows.Forms.Padding(4);
             this.comb_KeyF.Name = "comb_KeyF";
             this.comb_KeyF.Size = new System.Drawing.Size(54, 24);
             this.comb_KeyF.TabIndex = 141;
+            this.comb_KeyF.SelectedIndexChanged += new System.EventHandler(this.comb_KeyF_SelectedIndexChanged);
             // 
             // comboBox_tam_1
             // 
@@ -111,7 +108,7 @@
             // 
             // comboBox_tam
             // 
-            this.comboBox_tam.Location = new System.Drawing.Point(551, 40);
+            this.comboBox_tam.Location = new System.Drawing.Point(414, 40);
             this.comboBox_tam.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox_tam.Name = "comboBox_tam";
             this.comboBox_tam.Size = new System.Drawing.Size(54, 22);
@@ -128,48 +125,6 @@
             this.Tamlabel.TabIndex = 138;
             this.Tamlabel.Text = "Tam";
             this.Tamlabel.Visible = false;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(385, 18);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(44, 17);
-            this.label6.TabIndex = 137;
-            this.label6.Text = "Tabla";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(390, 70);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(50, 17);
-            this.label7.TabIndex = 136;
-            this.label7.Text = "Accion";
-            // 
-            // ComboBoxEntidadparaAtrib
-            // 
-            this.ComboBoxEntidadparaAtrib.FormattingEnabled = true;
-            this.ComboBoxEntidadparaAtrib.Location = new System.Drawing.Point(431, 11);
-            this.ComboBoxEntidadparaAtrib.Margin = new System.Windows.Forms.Padding(4);
-            this.ComboBoxEntidadparaAtrib.Name = "ComboBoxEntidadparaAtrib";
-            this.ComboBoxEntidadparaAtrib.Size = new System.Drawing.Size(175, 24);
-            this.ComboBoxEntidadparaAtrib.TabIndex = 135;
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "Alta",
-            "Baja",
-            "Modifica"});
-            this.comboBox3.Location = new System.Drawing.Point(447, 68);
-            this.comboBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(158, 24);
-            this.comboBox3.TabIndex = 134;
             // 
             // label16
             // 
@@ -196,7 +151,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(77, 48);
+            this.label15.Location = new System.Drawing.Point(77, 49);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(36, 17);
@@ -207,18 +162,19 @@
             // 
             this.comboBox_Tipo.FormattingEnabled = true;
             this.comboBox_Tipo.Items.AddRange(new object[] {
-            "I",
-            "S",
-            "F"});
-            this.comboBox_Tipo.Location = new System.Drawing.Point(129, 40);
+            "Int",
+            "String",
+            "Float"});
+            this.comboBox_Tipo.Location = new System.Drawing.Point(127, 40);
             this.comboBox_Tipo.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox_Tipo.Name = "comboBox_Tipo";
             this.comboBox_Tipo.Size = new System.Drawing.Size(54, 24);
             this.comboBox_Tipo.TabIndex = 130;
+            this.comboBox_Tipo.SelectedIndexChanged += new System.EventHandler(this.comboBox_Tipo_SelectedIndexChanged);
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(129, 13);
+            this.textBox4.Location = new System.Drawing.Point(127, 12);
             this.textBox4.Margin = new System.Windows.Forms.Padding(4);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(249, 22);
@@ -226,13 +182,14 @@
             // 
             // AceptarBoton_Atributo
             // 
-            this.AceptarBoton_Atributo.Location = new System.Drawing.Point(269, 171);
+            this.AceptarBoton_Atributo.Location = new System.Drawing.Point(161, 171);
             this.AceptarBoton_Atributo.Margin = new System.Windows.Forms.Padding(4);
             this.AceptarBoton_Atributo.Name = "AceptarBoton_Atributo";
             this.AceptarBoton_Atributo.Size = new System.Drawing.Size(100, 28);
             this.AceptarBoton_Atributo.TabIndex = 127;
             this.AceptarBoton_Atributo.Text = "Aceptar";
             this.AceptarBoton_Atributo.UseVisualStyleBackColor = true;
+            this.AceptarBoton_Atributo.Click += new System.EventHandler(this.AceptarBoton_Atributo_Click);
             // 
             // TextBox_ModificaAtribNuevo
             // 
@@ -256,7 +213,7 @@
             // 
             // AceptarBoton_Entidad
             // 
-            this.AceptarBoton_Entidad.Location = new System.Drawing.Point(269, 171);
+            this.AceptarBoton_Entidad.Location = new System.Drawing.Point(161, 171);
             this.AceptarBoton_Entidad.Margin = new System.Windows.Forms.Padding(4);
             this.AceptarBoton_Entidad.Name = "AceptarBoton_Entidad";
             this.AceptarBoton_Entidad.Size = new System.Drawing.Size(100, 28);
@@ -297,7 +254,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(54, 18);
+            this.label2.Location = new System.Drawing.Point(55, 18);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(58, 17);
@@ -307,28 +264,28 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(267, 138);
+            this.label1.Location = new System.Drawing.Point(260, 76);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(59, 17);
             this.label1.TabIndex = 147;
             this.label1.Text = "No llave";
             // 
-            // comboBox1
+            // noLlave
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.noLlave.FormattingEnabled = true;
+            this.noLlave.Items.AddRange(new object[] {
             "true",
             "false"});
-            this.comboBox1.Location = new System.Drawing.Point(324, 132);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(54, 24);
-            this.comboBox1.TabIndex = 146;
+            this.noLlave.Location = new System.Drawing.Point(325, 69);
+            this.noLlave.Margin = new System.Windows.Forms.Padding(4);
+            this.noLlave.Name = "noLlave";
+            this.noLlave.Size = new System.Drawing.Size(54, 24);
+            this.noLlave.TabIndex = 146;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(128, 132);
+            this.textBox1.Location = new System.Drawing.Point(127, 132);
             this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(249, 22);
@@ -339,9 +296,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(629, 212);
+            this.ClientSize = new System.Drawing.Size(390, 212);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.noLlave);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label23);
             this.Controls.Add(this.comboTabla_llaveF);
@@ -350,10 +307,6 @@
             this.Controls.Add(this.comboBox_tam_1);
             this.Controls.Add(this.comboBox_tam);
             this.Controls.Add(this.Tamlabel);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.ComboBoxEntidadparaAtrib);
-            this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.comboBox_Clave);
             this.Controls.Add(this.label15);
@@ -369,6 +322,7 @@
             this.Controls.Add(this.label2);
             this.Name = "FAtributo";
             this.Text = "Atributo";
+            this.Load += new System.EventHandler(this.FAtributo_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -383,10 +337,6 @@
         private System.Windows.Forms.TextBox comboBox_tam_1;
         private System.Windows.Forms.TextBox comboBox_tam;
         private System.Windows.Forms.Label Tamlabel;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox ComboBoxEntidadparaAtrib;
-        private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.ComboBox comboBox_Clave;
         private System.Windows.Forms.Label label15;
@@ -401,7 +351,7 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox noLlave;
         private System.Windows.Forms.TextBox textBox1;
     }
 }

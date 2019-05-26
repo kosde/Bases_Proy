@@ -17,6 +17,18 @@ namespace BD
         public bool Clave;                     // Clave True-False
         public string llavef;                  // Llave foranea
 
+        public Atributo()
+        {
+            Nombre_Tabla = "";
+            Nombre_Atributo = "";
+            Tipo = ' ';
+            Tamaño=-1;
+            Posicion = -1;
+            Sig_Atributo = -1;
+            Clave = false;
+            llavef = "";
+        }
+
         public Atributo(string Nom, char tipo, long tamaño, long posicion, bool ToF)
         {
             Nombre_Atributo = Nom;
