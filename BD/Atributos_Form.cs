@@ -201,6 +201,7 @@ namespace BD
                     tipo = vEnt.Tipo;
                     clave = vEnt.Clave;
                     nollave = vEnt.nollaves;
+                    llaveF = vEnt.llavef;
                     FileStream fichero = File.Open(nombrearch, FileMode.Open, FileAccess.ReadWrite);
                     BinaryWriter writer = new BinaryWriter(fichero);
                     BinaryReader reader = new BinaryReader(fichero);
@@ -288,8 +289,8 @@ namespace BD
             vAtrib1.Clave = Convert.ToBoolean(dataGrid_Atributo.Rows[i].Cells[3].Value.ToString());
             vAtrib1.llavef = dataGrid_Atributo.Rows[i].Cells[4].Value.ToString();
             vAtrib1.nollaves = Convert.ToBoolean(dataGrid_Atributo.Rows[i].Cells[5].Value.ToString());
-            vAtrib1.llenacampos();
             vAtrib2 = vAtrib1;
+            vAtrib1.llenacampos();
             if (vAtrib1.ShowDialog() == DialogResult.OK)
                 todoOk = true;
             if(todoOk == true)
@@ -330,6 +331,8 @@ namespace BD
                 tipo = vEnt.Tipo;
                 clave = vEnt.Clave;
                 nollave = vEnt.nollaves;
+                llaveF = vEnt.llavef;
+
                 FileStream fichero = File.Open(nombrearch, FileMode.Open, FileAccess.ReadWrite);
                 BinaryWriter writer = new BinaryWriter(fichero);
                 BinaryReader reader = new BinaryReader(fichero);
@@ -687,6 +690,9 @@ namespace BD
                     Nombre = reader.ReadString();
                     if ((Nombre.CompareTo(NombreNuevo.PadRight(29, ' '))) == 0)
                     {
+                        reader.ReadChar();
+                        reader.ReadInt64();
+                        //PosF = reader.ReadInt64();
                         reader.Close();
                         writer.Close();
                         fichero.Close();

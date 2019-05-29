@@ -47,6 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Atributo.cs" />
+    <Compile Include="Tuplas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tuplas.Designer.cs">
+      <DependentUpon>Tuplas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Atributos_Form.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +92,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Tuplas.resx">
+      <DependentUpon>Tuplas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Atributos_Form.resx">
       <DependentUpon>Atributos_Form.cs</DependentUpon>
     </EmbeddedResource>

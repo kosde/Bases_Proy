@@ -27,3 +27,4 @@ D:\Angel\Documents\Universidad\Bases de Datos A\Alejandra\Proyecto\Bases_Proy\BD
 D:\Angel\Documents\Universidad\Bases de Datos A\Alejandra\Proyecto\Bases_Proy\BD\obj\Debug\BD.exe
 D:\Angel\Documents\Universidad\Bases de Datos A\Alejandra\Proyecto\Bases_Proy\BD\obj\Debug\BD.pdb
 D:\Angel\Documents\Universidad\Bases de Datos A\Alejandra\Proyecto\Bases_Proy\BD\obj\Debug\BD.Borrar.resources
+D:\Angel\Documents\Universidad\Bases de Datos A\Alejandra\Proyecto\Bases_Proy\BD\obj\Debug\BD.Tuplas.resources

@@ -43,11 +43,26 @@
             this.bCrearBD = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.comboBox_CargaT = new System.Windows.Forms.ComboBox();
-            this.dDatosAtribEnt = new System.Windows.Forms.DataGridView();
+            this.dataGridView_Imp_Reg = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.label_NombreTabla = new System.Windows.Forms.Label();
+            this.bTuplas = new System.Windows.Forms.Button();
+            this.dataSQL = new System.Windows.Forms.DataGridView();
+            this.Compilar = new System.Windows.Forms.Button();
+            this.SQL = new System.Windows.Forms.Label();
+            this.textSQL = new System.Windows.Forms.TextBox();
+            this.dataGrid_Registro = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.comboBox_Dato_Registro = new System.Windows.Forms.ComboBox();
+            this.comboBox_Registro_Atributo = new System.Windows.Forms.ComboBox();
+            this.comboBox_Reg_tam = new System.Windows.Forms.ComboBox();
             this.MenuBD.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dDatosAtribEnt)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Imp_Reg)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSQL)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGrid_Registro)).BeginInit();
             this.SuspendLayout();
             // 
             // MenuBD
@@ -75,28 +90,28 @@
             // nuevoToolStripMenuItem
             // 
             this.nuevoToolStripMenuItem.Name = "nuevoToolStripMenuItem";
-            this.nuevoToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.nuevoToolStripMenuItem.Size = new System.Drawing.Size(148, 26);
             this.nuevoToolStripMenuItem.Text = "Nuevo";
             this.nuevoToolStripMenuItem.Click += new System.EventHandler(this.nuevoToolStripMenuItem_Click);
             // 
             // abirToolStripMenuItem
             // 
             this.abirToolStripMenuItem.Name = "abirToolStripMenuItem";
-            this.abirToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.abirToolStripMenuItem.Size = new System.Drawing.Size(148, 26);
             this.abirToolStripMenuItem.Text = "Abrir";
             this.abirToolStripMenuItem.Click += new System.EventHandler(this.abirToolStripMenuItem_Click);
             // 
             // guardarToolStripMenuItem
             // 
             this.guardarToolStripMenuItem.Name = "guardarToolStripMenuItem";
-            this.guardarToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.guardarToolStripMenuItem.Size = new System.Drawing.Size(148, 26);
             this.guardarToolStripMenuItem.Text = "Eliminar";
             this.guardarToolStripMenuItem.Click += new System.EventHandler(this.guardarToolStripMenuItem_Click);
             // 
             // modificarToolStripMenuItem
             // 
             this.modificarToolStripMenuItem.Name = "modificarToolStripMenuItem";
-            this.modificarToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
+            this.modificarToolStripMenuItem.Size = new System.Drawing.Size(148, 26);
             this.modificarToolStripMenuItem.Text = "Modificar";
             this.modificarToolStripMenuItem.Click += new System.EventHandler(this.modificarToolStripMenuItem_Click);
             // 
@@ -195,15 +210,15 @@
             this.comboBox_CargaT.Visible = false;
             this.comboBox_CargaT.SelectedIndexChanged += new System.EventHandler(this.comboBox_CargaT_SelectedIndexChanged);
             // 
-            // dDatosAtribEnt
+            // dataGridView_Imp_Reg
             // 
-            this.dDatosAtribEnt.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dDatosAtribEnt.Location = new System.Drawing.Point(12, 162);
-            this.dDatosAtribEnt.Name = "dDatosAtribEnt";
-            this.dDatosAtribEnt.RowTemplate.Height = 24;
-            this.dDatosAtribEnt.Size = new System.Drawing.Size(1132, 406);
-            this.dDatosAtribEnt.TabIndex = 86;
-            this.dDatosAtribEnt.Visible = false;
+            this.dataGridView_Imp_Reg.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_Imp_Reg.Location = new System.Drawing.Point(12, 162);
+            this.dataGridView_Imp_Reg.Name = "dataGridView_Imp_Reg";
+            this.dataGridView_Imp_Reg.RowTemplate.Height = 24;
+            this.dataGridView_Imp_Reg.Size = new System.Drawing.Size(920, 814);
+            this.dataGridView_Imp_Reg.TabIndex = 86;
+            this.dataGridView_Imp_Reg.Visible = false;
             // 
             // button1
             // 
@@ -219,12 +234,129 @@
             // label_NombreTabla
             // 
             this.label_NombreTabla.AutoSize = true;
-            this.label_NombreTabla.Location = new System.Drawing.Point(551, 127);
+            this.label_NombreTabla.Location = new System.Drawing.Point(465, 130);
             this.label_NombreTabla.Name = "label_NombreTabla";
             this.label_NombreTabla.Size = new System.Drawing.Size(44, 17);
             this.label_NombreTabla.TabIndex = 88;
             this.label_NombreTabla.Text = "Tabla";
             this.label_NombreTabla.Visible = false;
+            // 
+            // bTuplas
+            // 
+            this.bTuplas.Location = new System.Drawing.Point(640, 45);
+            this.bTuplas.Name = "bTuplas";
+            this.bTuplas.Size = new System.Drawing.Size(75, 23);
+            this.bTuplas.TabIndex = 89;
+            this.bTuplas.Text = "Tuplas";
+            this.bTuplas.UseVisualStyleBackColor = true;
+            this.bTuplas.Visible = false;
+            this.bTuplas.Click += new System.EventHandler(this.bTuplas_Click);
+            // 
+            // dataSQL
+            // 
+            this.dataSQL.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataSQL.Location = new System.Drawing.Point(970, 162);
+            this.dataSQL.Name = "dataSQL";
+            this.dataSQL.RowTemplate.Height = 24;
+            this.dataSQL.Size = new System.Drawing.Size(920, 814);
+            this.dataSQL.TabIndex = 90;
+            this.dataSQL.Visible = false;
+            // 
+            // Compilar
+            // 
+            this.Compilar.Location = new System.Drawing.Point(1700, 88);
+            this.Compilar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Compilar.Name = "Compilar";
+            this.Compilar.Size = new System.Drawing.Size(100, 28);
+            this.Compilar.TabIndex = 127;
+            this.Compilar.Text = "Ejecutar";
+            this.Compilar.UseVisualStyleBackColor = true;
+            this.Compilar.Visible = false;
+            this.Compilar.Click += new System.EventHandler(this.Compilar_Click);
+            // 
+            // SQL
+            // 
+            this.SQL.AutoSize = true;
+            this.SQL.Location = new System.Drawing.Point(1112, 96);
+            this.SQL.Name = "SQL";
+            this.SQL.Size = new System.Drawing.Size(36, 17);
+            this.SQL.TabIndex = 126;
+            this.SQL.Text = "SQL";
+            this.SQL.Visible = false;
+            // 
+            // textSQL
+            // 
+            this.textSQL.Location = new System.Drawing.Point(1155, 93);
+            this.textSQL.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textSQL.Name = "textSQL";
+            this.textSQL.Size = new System.Drawing.Size(526, 22);
+            this.textSQL.TabIndex = 125;
+            this.textSQL.Visible = false;
+            // 
+            // dataGrid_Registro
+            // 
+            this.dataGrid_Registro.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGrid_Registro.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column4,
+            this.Column3});
+            this.dataGrid_Registro.Location = new System.Drawing.Point(124, 454);
+            this.dataGrid_Registro.Margin = new System.Windows.Forms.Padding(4);
+            this.dataGrid_Registro.Name = "dataGrid_Registro";
+            this.dataGrid_Registro.Size = new System.Drawing.Size(703, 155);
+            this.dataGrid_Registro.TabIndex = 128;
+            this.dataGrid_Registro.Visible = false;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Atributo";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "Tipo";
+            this.Column2.Name = "Column2";
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Tamaño";
+            this.Column4.Name = "Column4";
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Dato";
+            this.Column3.Name = "Column3";
+            // 
+            // comboBox_Dato_Registro
+            // 
+            this.comboBox_Dato_Registro.FormattingEnabled = true;
+            this.comboBox_Dato_Registro.Location = new System.Drawing.Point(560, 380);
+            this.comboBox_Dato_Registro.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBox_Dato_Registro.Name = "comboBox_Dato_Registro";
+            this.comboBox_Dato_Registro.Size = new System.Drawing.Size(144, 24);
+            this.comboBox_Dato_Registro.TabIndex = 130;
+            this.comboBox_Dato_Registro.Visible = false;
+            // 
+            // comboBox_Registro_Atributo
+            // 
+            this.comboBox_Registro_Atributo.FormattingEnabled = true;
+            this.comboBox_Registro_Atributo.Location = new System.Drawing.Point(301, 380);
+            this.comboBox_Registro_Atributo.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBox_Registro_Atributo.Name = "comboBox_Registro_Atributo";
+            this.comboBox_Registro_Atributo.Size = new System.Drawing.Size(175, 24);
+            this.comboBox_Registro_Atributo.TabIndex = 129;
+            this.comboBox_Registro_Atributo.Visible = false;
+            // 
+            // comboBox_Reg_tam
+            // 
+            this.comboBox_Reg_tam.FormattingEnabled = true;
+            this.comboBox_Reg_tam.Location = new System.Drawing.Point(301, 432);
+            this.comboBox_Reg_tam.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBox_Reg_tam.Name = "comboBox_Reg_tam";
+            this.comboBox_Reg_tam.Size = new System.Drawing.Size(160, 24);
+            this.comboBox_Reg_tam.TabIndex = 131;
+            this.comboBox_Reg_tam.Visible = false;
             // 
             // Manejador
             // 
@@ -233,9 +365,14 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1902, 1033);
+            this.Controls.Add(this.Compilar);
+            this.Controls.Add(this.SQL);
+            this.Controls.Add(this.textSQL);
+            this.Controls.Add(this.dataSQL);
+            this.Controls.Add(this.bTuplas);
             this.Controls.Add(this.label_NombreTabla);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.dDatosAtribEnt);
+            this.Controls.Add(this.dataGridView_Imp_Reg);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.comboBox_CargaT);
             this.Controls.Add(this.bCrearBD);
@@ -245,13 +382,19 @@
             this.Controls.Add(this.BModificarT);
             this.Controls.Add(this.BAgregarT);
             this.Controls.Add(this.MenuBD);
+            this.Controls.Add(this.dataGrid_Registro);
+            this.Controls.Add(this.comboBox_Dato_Registro);
+            this.Controls.Add(this.comboBox_Registro_Atributo);
+            this.Controls.Add(this.comboBox_Reg_tam);
             this.MainMenuStrip = this.MenuBD;
             this.Name = "Manejador";
             this.Text = "Manejador";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.MenuBD.ResumeLayout(false);
             this.MenuBD.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dDatosAtribEnt)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Imp_Reg)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSQL)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGrid_Registro)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -273,9 +416,22 @@
         private System.Windows.Forms.Button bCrearBD;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox comboBox_CargaT;
-        private System.Windows.Forms.DataGridView dDatosAtribEnt;
+        private System.Windows.Forms.DataGridView dataGridView_Imp_Reg;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label_NombreTabla;
+        private System.Windows.Forms.Button bTuplas;
+        private System.Windows.Forms.DataGridView dataSQL;
+        private System.Windows.Forms.Button Compilar;
+        private System.Windows.Forms.Label SQL;
+        private System.Windows.Forms.TextBox textSQL;
+        private System.Windows.Forms.DataGridView dataGrid_Registro;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        public System.Windows.Forms.ComboBox comboBox_Dato_Registro;
+        private System.Windows.Forms.ComboBox comboBox_Registro_Atributo;
+        private System.Windows.Forms.ComboBox comboBox_Reg_tam;
     }
 }
 
