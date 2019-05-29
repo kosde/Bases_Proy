@@ -316,23 +316,13 @@ namespace BD
 
             FAtributo vEnt = vAtrib1;
             if (todoOk == true)
-            {/*
-                public string Nombre_Tabla;
-                public string Nombre_Atributo;         // Nombre del Atributo
-                public char Tipo;                      // Tipo de atributo Long Sting Char Float
-                public long Tamaño;                    // Tamaño segun tipo ^
-                public long Posicion;                  // Posicion de inicio Atributo
-                public long Sig_Atributo;              // Posicion Siguiente Atributo
-                public bool Clave;                     // Clave True-False
-                public string llavef;                  // Llave foranea
-                 */
+            {
                 NombreAtributo = vEnt.Nombre_Atributo;
                 TamañoAtrib = vEnt.Tamaño;
                 tipo = vEnt.Tipo;
                 clave = vEnt.Clave;
                 nollave = vEnt.nollaves;
                 llaveF = vEnt.llavef;
-
                 FileStream fichero = File.Open(nombrearch, FileMode.Open, FileAccess.ReadWrite);
                 BinaryWriter writer = new BinaryWriter(fichero);
                 BinaryReader reader = new BinaryReader(fichero);

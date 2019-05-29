@@ -950,17 +950,17 @@ namespace BD
                     checarf = checarf.Replace(" ", "");
                     if (checarf == "")
                         checarf = "false";
-                    if (checar.Clave.ToString().CompareTo("True") == 0 && checarf.CompareTo("false") != 0)
+                    if (checar.Clave == true && checarf.CompareTo("false") != 0)
                         listaatribpasados[contador] = true;
-                    if (checar.Clave.ToString().CompareTo("False") == 0 && checarf.CompareTo("false") == 0)
+                    if (checar.Clave == false && checarf.CompareTo("false") == 0)
                         listaatribpasados[contador] = true;
-                    if (checar.Clave.ToString().CompareTo("True") == 0 && checarf.CompareTo("false") == 0)
+                    if (checar.Clave == true && checarf.CompareTo("false") == 0)
                         listaatribpasados[contador] = true;
-                    if (checar.Clave.ToString().CompareTo("False") == 0)
+                    if (checar.Clave == false)
                     {
                         if (checarf.CompareTo("false") != 0)
                         {
-                            listaatribpasados[contador] = checarinsercionllavef(checar.llavef, contador);
+                            listaatribpasados[contador] = checarinsercionllavef(checar.llavef, contador - 1);
                         }
                     }
                     contador++;
@@ -1234,6 +1234,8 @@ namespace BD
                     r.Close();
                     fic.Close();
                 }
+                else
+                    MessageBox.Show("No se puede eliminar el dato, ya que tiene una referencia en otra trabla");
             }
             catch { }
         }
@@ -1698,6 +1700,8 @@ namespace BD
                     r.Close();
                     fic.Close();
                 }
+                else
+                    MessageBox.Show("No se puede eliminar el dato, ya que tiene una referencia en otra trabla");
             }
             catch { }
         }
